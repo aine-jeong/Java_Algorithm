@@ -1,4 +1,4 @@
-package prac;
+package baekjoon;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -6,7 +6,7 @@ import java.io.InputStreamReader;
 import java.io.OutputStreamWriter;
 import java.util.StringTokenizer;
  
-public class Main {
+public class Main11021 {
  
 	public static void main(String[] args) throws IOException {
 		//BufferedReader, BufferedWriter 사용시 예외처리 필수
@@ -22,12 +22,12 @@ public class Main {
 		//특정 문자에 따라 문자열을 나누고 싶을 때 StringTokenizer를 이용하게 된다.
 		StringTokenizer st;
  
-		for (int i = 0; i < N; i++) {
+		for (int i = 1; i <= N; i++) {
 			//new StringTokenizer(문자열, 구분자): 구분자를 기준으로 문자열 분리
 			st = new StringTokenizer(br.readLine()," ");
 			//반환되는 타입이 String이므로, 형변환 (Integer.parseInt)
 			//형변환한 두 토큰을 더하여 BufferedWriter.write()에 담기
-			bw.write((Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))+ "\n");
+			bw.write("Case #"+ i + ": " + (Integer.parseInt(st.nextToken()) + Integer.parseInt(st.nextToken()))+ "\n");
 		}
 		//버퍼 닫기
 		br.close();
